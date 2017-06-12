@@ -1,9 +1,9 @@
 {
   "pets": [
     {
-      "name": "Donald",
-      "status": "Out of stock",
-      "id": 4
+      "id": 1,
+      "name": "update name",
+      "status": "update status"
     }
   ]
 }

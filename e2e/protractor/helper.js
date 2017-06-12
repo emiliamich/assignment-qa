@@ -14,5 +14,22 @@ module.exports = {
       }
 
       return day + "-" + month + "-" + year;
-  }
+  },
+   createPet: function(name, status) {
+        var petName = element(by.className('pet-name'));
+        petName.sendKeys(name);
+        var petStatus = element(by.className('pet-status'));
+        petStatus.sendKeys(status);
+        var create = element(by.id('btn-create'));
+        create.click();
+   },
+   clearDBPets: function(buttons) {
+        buttons.count().then(function(count) {
+            console.log(count);
+            while(count > 0) {
+                buttons.first().click();
+                count--;
+            }
+        });
+   }
 };

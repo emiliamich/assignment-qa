@@ -8,6 +8,7 @@ You will find below the users stories and DoD that might guide you on your journ
 Prioritizing your work is advised in case you run out of time.  
 **Choose wisely** !
 
+
 ## Expected output
 **The product owner** is going to execute your automated tests against the stable DEV environment in order to assess if the stories can be moved from *Completed* to *Accepted*.
 To make this possible, we expect you to provide minimal instructions on how to re-execute your tests.

@@ -1,6 +1,6 @@
 {
   "name": "qa-assignment",
-  "author" : "Piotr Nowak <p.nowak2@gmail.com> and Jean-Michel Garcia <contact@jmichelgarcia.com>",
+  "author": "Piotr Nowak <p.nowak2@gmail.com> and Jean-Michel Garcia <contact@jmichelgarcia.com>",
   "version": "0.1.0",
   "dependencies": {
     "backbone": "^1.2.3",
@@ -8,7 +8,7 @@
     "express": "~4.0.0",
     "hbsfy": "^2.3.1",
     "jade": "1.11.0",
-    "jquery": "^2.1.4",
+    "jquery": "~2.1.4",
     "json-server": "^0.9.4",
     "method-override": "~1.0.0",
     "mongodb": "^2.1.0",
@@ -20,7 +20,6 @@
     "js-yaml": "^3.3.0",
     "swagger-tools": "0.9.*",
     "bootstrap": "4.0.0-alpha.5",
-    "jquery": "~2.1.4",
     "tether": "^1.1.1",
     "grunt": "^0.4.5",
     "grunt-cli": "0.1.13",
@@ -41,5 +40,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "grunt dist"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "protractor-perf": "^0.2.3"
+  }
 }

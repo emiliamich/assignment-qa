@@ -3,5 +3,14 @@ exports.config = {
     specs: ['protractor/**/*spec.js'],
     multiCapabilities: [{
         'browserName': 'chrome'
-    }]
+    }],
+     onPrepare: function() {
+        beforeEach(function() {
+            browser.ignoreSynchronization = true;
+        });
+    },
+    jasmineNodeOpts: {
+        showColors: true,
+        defaultTimeoutInterval: 30000
+    }
 };

@@ -1,7 +1,7 @@
 describe('pets homepage list', function() {
     var helper = require('./helper');
 
-    it('should display the date', function() {
+    xit('should display the date', function() {
         browser.waitForAngularEnabled(false);
         browser.get('http://localhost:4200');
 
@@ -11,7 +11,7 @@ describe('pets homepage list', function() {
         browser.waitForAngularEnabled(true);
     });
 
-    it('should displayed date match current date', function(){
+    xit('should displayed date match current date', function(){
         browser.waitForAngularEnabled(false);
         browser.get('http://localhost:4200');
 
@@ -22,7 +22,7 @@ describe('pets homepage list', function() {
     });
 
 
-    it('should the banner be black', function () {
+    xit('should the banner be black', function () {
         browser.waitForAngularEnabled(false);
         browser.get('http://localhost:4200');
 
