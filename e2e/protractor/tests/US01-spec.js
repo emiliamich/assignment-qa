@@ -1,5 +1,5 @@
-describe('pets homepage list', function() {
-    var helper = require('./helper');
+describe('US01 - pet store home page', function() {
+    var helper = require('../helper');
 
     xit('should display the date', function() {
         browser.waitForAngularEnabled(false);
