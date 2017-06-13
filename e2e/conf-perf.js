@@ -16,3 +16,5 @@ exports.config = {
 
     allScriptsTimeout: 200000
 };
+
+//https://gist.github.com/axemclion/9594795#file-example-spec-js
