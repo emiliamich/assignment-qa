@@ -18,9 +18,9 @@ module.exports = {
         return day + "-" + month + "-" + year;
     },
     createPet: function(name, status) {
-        var petName = element(by.className('pet-name'));
+        var petName = element.all(by.className('pet-name')).first();
         petName.sendKeys(name);
-        var petStatus = element(by.className('pet-status'));
+        var petStatus = element.all(by.className('pet-status')).first();
         petStatus.sendKeys(status);
         var create = element(by.id('btn-create'));
         create.click();
@@ -29,14 +29,17 @@ module.exports = {
         fs.readFile(jsonFile, function(err, content) {
             if(err) throw err;
             var parseJson = JSON.parse(content);
-            parseJson.pets.clear();
+            parseJson.pets = [];
+            fs.writeFile(jsonFile, JSON.stringify(parseJson), function(err) {
+                if(err) throw err;
+            })
         })
     },
     add100ItemsToPetStore(jsonFile) {
-        this.clearDB(jsonFile);
         fs.readFile(jsonFile, function(err, content) {
             if(err) throw err;
             var parseJson = JSON.parse(content);
+            parseJson.pets = [];
             for (i = 0; i < 100 ; i++){
                 parseJson.pets.push({
                     "name": "rex",

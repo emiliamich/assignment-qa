@@ -2,7 +2,7 @@ var helper = require('../helper');
 
 describe('US04 - Pet store home page', function() {
     
-    xit('should update an existing pet by pressing ENTER key', function() {
+    it('should update an existing pet by pressing ENTER key', function() {
         browser.waitForAngularEnabled(false);
         browser.get('http://localhost:4200');
 
@@ -31,7 +31,7 @@ describe('US04 - Pet store home page', function() {
        browser.waitForAngularEnabled(true);
     });
 
-    xit('should be able to discard any update changes by pressing ESC key', function(){
+    it('should be able to discard any update changes by pressing ESC key', function(){
         browser.waitForAngularEnabled(false);
         browser.get('http://localhost:4200');
 
@@ -58,7 +58,7 @@ describe('US04 - Pet store home page', function() {
         browser.waitForAngularEnabled(true);
     });
 
-    xit('should update an existing pet by clicking outside the edition zone', function() {
+    it('should update an existing pet by clicking outside the edition zone', function() {
         browser.waitForAngularEnabled(false);
         browser.get('http://localhost:4200');
 

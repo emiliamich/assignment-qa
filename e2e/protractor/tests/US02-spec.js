@@ -1,19 +1,15 @@
 var helper = require('../helper');
 
 describe('US02 - pet store home page', function() {
+    var jsonFile = 'd:/protractor/assignment-qa/src/server/db.json';
 
     beforeAll(function() {
-        //browser.waitForAngularEnabled(false);
-        //browser.get('http://localhost:4200');
-
-        //for (var i = 0; i < 100; i++) {
-        //    helper.createPet('rex','alive');
-        //}
-
-        //browser.waitForAngularEnabled(true);
-        var jsonFile = '/assignment/src/server/db.json';
         helper.clearDB(jsonFile);
         helper.add100ItemsToPetStore(jsonFile);
+    });
+
+    afterAll(function(){
+        helper.clearDB(jsonFile);
     });
 
     it('should view the list of pets', function() {
@@ -33,7 +29,7 @@ describe('US02 - pet store home page', function() {
     });
 
      // create 100 pets
-    xit('should create 100 new pets', function(done) {
+    it('should create 100 new pets', function() {
         browser.waitForAngularEnabled(false);
         browser.get('http://localhost:4200');
 

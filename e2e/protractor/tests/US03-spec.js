@@ -1,9 +1,9 @@
 var helper = require('../helper');
 
 describe('US03 - pet store home page', function() {
- 
+
     // create new user
-    xit('should create new pet by clicking Create button', function() {
+    it('should create new pet by clicking Create button', function() {
         browser.waitForAngularEnabled(false);
         browser.get('http://localhost:4200');
 
@@ -25,13 +25,13 @@ describe('US03 - pet store home page', function() {
     //user is able to press enter key and create the new pet
 
     // create new user
-    xit('should create new pet by pressing Enter key on Create button', function() {
+    it('should create new pet by pressing Enter key on Create button', function() {
         browser.waitForAngularEnabled(false);
         browser.get('http://localhost:4200');
 
-        var petName = element(by.className('pet-name'));
+        var petName = element.all(by.className('pet-name')).first();
         petName.sendKeys('rex');
-        var petStatus = element(by.className('pet-status'));
+        var petStatus = element.all(by.className('pet-status')).first();
         petStatus.sendKeys('alive');
         var create = element(by.id('btn-create'));
         
@@ -42,11 +42,11 @@ describe('US03 - pet store home page', function() {
     });
 
 
-    xit('should follow tab sequence Name Status Create', function() {
+    it('should follow tab sequence Name Status Create', function() {
         browser.waitForAngularEnabled(false);
         browser.get('http://localhost:4200');
 
-        var petName = element(by.className('pet-name'));
+        var petName = element.all(by.className('pet-name')).first();
         petName.sendKeys('focus name');
         petName.sendKeys(protractor.Key.TAB);
           
@@ -62,17 +62,17 @@ describe('US03 - pet store home page', function() {
 
 
     // verify if name and status are manadatory (bug are not)
-    xit('should name and status be mandatory', function() {
+    it('should name and status be mandatory', function() {
         browser.waitForAngularEnabled(false);
         browser.get('http://localhost:4200');
 
-        var petName = element(by.className('pet-name'));
-        var petStatus = element(by.className('pet-status'));
+        var petName = element.all(by.className('pet-name')).first();
+        var petStatus = element.all(by.className('pet-status')).first();
        
         var create = element(by.id('btn-create'));
         expect(create.isEnabled()).toBe(false);
 
-        browser.waitForAngularEnabled(false);
+        browser.waitForAngularEnabled(true);
     });
 });
 

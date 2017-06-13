@@ -1,7 +1,8 @@
-describe('US01 - pet store home page', function() {
-    var helper = require('../helper');
+var helper = require('../helper');
 
-    xit('should display the date', function() {
+describe('US01 - pet store home page', function() {
+
+    it('should display the date', function() {
         browser.waitForAngularEnabled(false);
         browser.get('http://localhost:4200');
 
@@ -11,7 +12,7 @@ describe('US01 - pet store home page', function() {
         browser.waitForAngularEnabled(true);
     });
 
-    xit('should displayed date match current date', function(){
+    it('should displayed date match current date', function(){
         browser.waitForAngularEnabled(false);
         browser.get('http://localhost:4200');
 
@@ -22,7 +23,7 @@ describe('US01 - pet store home page', function() {
     });
 
 
-    xit('should the banner be black', function () {
+    it('should the banner be black', function () {
         browser.waitForAngularEnabled(false);
         browser.get('http://localhost:4200');
 
