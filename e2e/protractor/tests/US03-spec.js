@@ -1,6 +1,15 @@
 var helper = require('../helper');
 
 describe('US03 - pet store home page', function() {
+    var jsonFile = helper.getJsonPath();
+
+    beforeAll(function() {
+        helper.clearDB(jsonFile);
+    });
+
+    afterAll(function(){
+        helper.clearDB(jsonFile);
+    });
 
     // create new user
     it('should create new pet by clicking Create button', function() {

@@ -1,6 +1,16 @@
 var helper = require('../helper');
 
 describe('US04 - Pet store home page', function() {
+    var jsonFile = helper.getJsonPath();
+
+    beforeAll(function() {
+        helper.clearDB(jsonFile);
+        helper.addItemsToPetStore(jsonFile, 1);
+    });
+
+    afterAll(function(){
+        helper.clearDB(jsonFile);
+    });
     
     it('should update an existing pet by pressing ENTER key', function() {
         browser.waitForAngularEnabled(false);
@@ -9,7 +19,7 @@ describe('US04 - Pet store home page', function() {
         //iteration of the table an finding elements
         var tableData = element.all(by.className('table-hover'));
         //get Last Rows 
-        var rows = tableData.all(by.css("tr:nth-last-child(1)"));
+        var rows = tableData.all(by.css("tr")).last();
         //Get All Cells
         var cells = rows.all(by.tagName("td"));
 
@@ -18,6 +28,8 @@ describe('US04 - Pet store home page', function() {
         petName.clear();
         petName.sendKeys('update name');
         browser.actions().sendKeys(protractor.Key.ENTER).perform();
+
+
 
         cells.first().click();
         var petStatus = element.all(by.className('pet-status')).last();
@@ -38,7 +50,7 @@ describe('US04 - Pet store home page', function() {
         //iteration of the table an finding elements
         var tableData = element.all(by.className('table-hover'));
         //get Last Rows 
-        var rows = tableData.all(by.css("tr:nth-last-child(1)"));
+        var rows = tableData.all(by.css("tr")).last();
         //Get All Cells
         var cells = rows.all(by.tagName("td"));
 
@@ -65,7 +77,7 @@ describe('US04 - Pet store home page', function() {
         //iteration of the table an finding elements
         var tableData = element.all(by.className('table-hover'));
         //get Last Rows 
-        var rows = tableData.all(by.css("tr:nth-last-child(1)"));
+        var rows = tableData.all(by.css("tr")).last();
         //Get All Cells
         var cells = rows.all(by.tagName("td"));
 

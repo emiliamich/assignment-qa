@@ -1,11 +1,11 @@
 var helper = require('../helper');
 
 describe('US02 - pet store home page', function() {
-    var jsonFile = 'd:/protractor/assignment-qa/src/server/db.json';
+    var jsonFile = helper.getJsonPath();
 
     beforeAll(function() {
         helper.clearDB(jsonFile);
-        helper.add100ItemsToPetStore(jsonFile);
+        helper.addItemsToPetStore(jsonFile, 100);
     });
 
     afterAll(function(){

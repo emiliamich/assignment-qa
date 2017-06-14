@@ -35,12 +35,12 @@ module.exports = {
             })
         })
     },
-    add100ItemsToPetStore(jsonFile) {
+    addItemsToPetStore(jsonFile, index) {
         fs.readFile(jsonFile, function(err, content) {
             if(err) throw err;
             var parseJson = JSON.parse(content);
             parseJson.pets = [];
-            for (i = 0; i < 100 ; i++){
+            for (i = 0; i < index ; i++) {
                 parseJson.pets.push({
                     "name": "rex",
                     "status": "alive",
@@ -51,5 +51,8 @@ module.exports = {
                 if(err) throw err;
             })
         })
+    },
+    getJsonPath() {
+        return 'd:/protractor/assignment-qa/src/server/db.json';
     }
 };
