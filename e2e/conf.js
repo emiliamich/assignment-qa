@@ -3,6 +3,8 @@ exports.config = {
     specs: ['protractor/tests/*spec.js'],
     multiCapabilities: [{
         'browserName': 'chrome'
+    }, {
+        'browserName': 'firefox'
     }],
      onPrepare: function() {
         beforeEach(function() {

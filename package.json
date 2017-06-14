@@ -41,7 +41,5 @@
     "postinstall": "grunt dist"
   },
   "license": "ISC",
-  "devDependencies": {
-    "protractor-perf": "^0.2.3"
-  }
+  "devDependencies": {}
 }
