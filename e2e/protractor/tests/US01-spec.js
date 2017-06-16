@@ -12,12 +12,12 @@ describe('US01 - pet store home page', function() {
         browser.waitForAngularEnabled(true);
     });
 
-    it('should displayed date match current date', function(){
+    it('should displayed a date witch match current date', function(){
         browser.waitForAngularEnabled(false);
         browser.get('http://localhost:4200');
 
-        var curDateExp = element(by.className('banner-date'));
-        expect(curDateExp.getText()).toBe(helper.getCurrentDate());
+        var curDateExt = element(by.className('banner-date'));
+        expect(curDateExt.getText()).toBe(helper.getCurrentDate());
 
         browser.waitForAngularEnabled(true);
     });
